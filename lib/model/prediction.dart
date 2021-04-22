@@ -59,9 +59,8 @@ class Prediction {
     }
     placeId = json['place_id'];
     reference = json['reference'];
-    structuredFormatting = json['structured_formatting'] != null
-        ? new StructuredFormatting.fromJson(json['structured_formatting'])
-        : null;
+    structuredFormatting =
+        json['structured_formatting'] != null ? new StructuredFormatting.fromJson(json['structured_formatting']) : null;
     if (json['terms'] != null) {
       terms = new List<Terms>();
       json['terms'].forEach((v) {
@@ -78,8 +77,7 @@ class Prediction {
     data['description'] = this.description;
     data['id'] = this.id;
     if (this.matchedSubstrings != null) {
-      data['matched_substrings'] =
-          this.matchedSubstrings.map((v) => v.toJson()).toList();
+      data['matched_substrings'] = this.matchedSubstrings.map((v) => v.toJson()).toList();
     }
     data['place_id'] = this.placeId;
     data['reference'] = this.reference;

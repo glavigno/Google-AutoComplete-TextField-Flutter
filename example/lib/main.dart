@@ -82,8 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
           itmClick: (Prediction prediction) {
             controller.text = prediction.description;
 
-            controller.selection = TextSelection.fromPosition(
-                TextPosition(offset: prediction.description.length));
+            controller.selection = TextSelection.fromPosition(TextPosition(offset: prediction.description.length));
           }
           // default 600 ms ,
           ),
