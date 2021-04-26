@@ -181,7 +181,9 @@ class _GooglePlaceAutoCompleteTextFieldState extends State<GooglePlaceAutoComple
     prediction.lat = placeDetails.result.geometry.location.lat.toString();
     prediction.lng = placeDetails.result.geometry.location.lng.toString();
 
-    widget.getPlaceDetailWithLatLng(prediction);
+    if (prediction != null) {
+      widget.getPlaceDetailWithLatLng(prediction);
+    }
 
 //    prediction.latLng = new LatLng(
 //        placeDetails.result.geometry.location.lat,
